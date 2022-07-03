@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
 
-const UserRoutes = require("./routes/slide.routes");
+const SliderRoutes = require("./routes/slide.routes");
 
 require("dotenv").config();
 
@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(morgan("dev"));
 
-app.use("/api", UserRoutes);
+app.use("/api", SliderRoutes);
 
 const uri = process.env.ATLAS_URI;
 const port = process.env.PORT;
